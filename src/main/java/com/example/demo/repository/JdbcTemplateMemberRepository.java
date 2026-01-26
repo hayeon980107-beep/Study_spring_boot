@@ -46,6 +46,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
         List<Member> result = jdbcTemplate.query("select * from member where name = ?", memberRowMapper(), name);
         return result.stream().findAny();
     }
+    //test
 
     @Override
     public List<Member> findAll() {
